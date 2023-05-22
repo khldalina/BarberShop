@@ -1,0 +1,83 @@
+.about {
+  .container {
+    display: flex;
+  }
+}
+
+.about__list {
+  display: none;
+  @include tablet {
+    display: block;
+    margin-right: 30px;
+  }
+
+  @include desktop {
+    display: flex;
+    margin-right: 64px;
+  }
+}
+
+.about__item {
+  width: 330px;
+  height: 235px;
+
+  @include desktop {
+    width: 270px;
+    height: 445px;
+  }
+}
+
+.about__item + .about__item {
+  margin-left: 0;
+  margin-top: 30px;
+  @include desktop {
+    margin-left: 30px;
+    margin-top: 0px;
+  }
+}
+
+.about-content__top-text {
+  margin-bottom: 20px;
+}
+
+.about-content__title {
+  width: 260px;
+  font-size: 28px;
+  margin-bottom: 20px;
+
+  @include tablet {
+    width: 330px;
+  }
+
+  @include desktop {
+    font-size: 42px;
+    width: 100%;
+  }
+}
+
+.about-content__bottom-text {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.about-content__text {
+  @include font(null, 14px, 1.86, 0.02em);
+  color: var(--text-color);
+  margin-bottom: 40px;
+
+  @include desktop {
+    width: 450px;
+  }
+}
+
+.about-content__btn-link {
+  color: var(--main-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+  }
+}

@@ -1,0 +1,29 @@
+.top-text {
+  @include font(600, 11px, 1.36, 0.1em);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  &--dark {
+    color: var(--main-color);
+  }
+
+  &--light {
+    color: rgba(157, 164, 189, 0.6);
+  }
+
+  &::before {
+    content: '';
+    height: 1px;
+    width: 63px;
+    background-color: currentColor;
+    margin-right: 21px;
+  }
+}
+
+.bottom-text {
+  @include font(null, 16px, 1.67, 0.02em);
+  @include desktop {
+    @include font(null, 18px, 1.67, 0.02em);
+  }
+}

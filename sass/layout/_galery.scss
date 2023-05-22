@@ -1,0 +1,38 @@
+.galery__top-text {
+  margin-bottom: 44px;
+}
+
+.galery__list {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+}
+
+.galery__item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+  }
+}
